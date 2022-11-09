@@ -1,9 +1,13 @@
 import React from 'react';
+import './Bannar.css';
+
+
+
 
 const Bannar = () => {
     return (
-        <div>
-            <h4>this is a bannar</h4>
+        <div className='bannar'>
+            
         </div>
     );
 };
