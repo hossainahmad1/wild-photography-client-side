@@ -14,7 +14,8 @@ const ServicesLimit = () => {
             })
     }, [])
     return (
-        <div>
+        <div className='mt-20'>
+            <h2 className='text-4xl font-bold text-center'>Service Blog</h2>
             <div className='grid gap-5 mt-10 mb-11 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     serviceLimitt.map(service => <ServicesLimitCart

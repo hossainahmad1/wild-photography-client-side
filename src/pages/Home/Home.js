@@ -6,12 +6,8 @@ const Home = () => {
     return (
         <div>
             <h3>this is a home page</h3>
-            <div>
-                <Bannar></Bannar>
-            </div>
-            <div>
-                <ServicesLimit></ServicesLimit>
-            </div>
+            <Bannar></Bannar>
+            <ServicesLimit></ServicesLimit>
         </div>
     );
 };
