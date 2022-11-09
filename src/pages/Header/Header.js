@@ -1,20 +1,37 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../asset/logo/logo.png';
+import { AuthContex } from '../../Provider/AuthProvider';
 
 
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContex)
 
     const navbarItems = <>
-        <li className='mx-4 font-semibold'><Link to='/'>Home</Link></li>
-        <li><Link className='mx-4 font-semibold' to='/login'> login </Link></li>
-        <li><Link className='mx-4 font-semibold' to='/signup'> SignUp </Link></li>
-        <li><Link className='mx-4 font-semibold' to='/blog'> Blog </Link></li>
+        <li className='mx-2 text-2xl font-semibold'><Link to='/'>Home</Link></li>
+        {
+            user?.email ?
+                <>
+                    <li className='mx-2 text-2xl font-semibold'><Link to='/myreview'>My Review</Link></li>
+                    <li className='mx-2 text-2xl font-semibold'><Link to='/addservice'>Add Service</Link></li>
+                </>
+                :
+                <></>
+        }
+        <li className='mx-2 text-2xl font-semibold'><Link to='/blog'> Blog </Link></li>
     </>
 
+    const handleSignOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
+
+
     return (
-        <div className="navbar bg-neutral-400">
+        <div className="navbar bg-stone-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,6 +44,7 @@ const Header = () => {
                 <Link to='/'>
                     <img className='rounded-md' src={logo} alt="" />
                 </Link>
+                <h1 className='text-4xl font-bold ml-2'>Wild World</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -34,9 +52,18 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                {
+                    user?.uid ?
+                        <button onClick={handleSignOut} className=' text-2xl font-semibold  '>SignOut</button>
+                        :
+                        <>
+                            <Link className='mx-2 text-2xl font-semibold' to='/login'>Login</Link>
+                            <Link className='mx-2 text-2xl font-semibold' to='/signup'>SignUp</Link>
+                        </>
+                }
 
             </div>
-        </div>
+        </div >
     );
 };
 

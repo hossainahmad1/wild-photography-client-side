@@ -1,0 +1,44 @@
+[
+    {
+        "_id": "01",
+        "title": "Red Fox",
+        "img": "https://i.pinimg.com/originals/4c/d7/1a/4cd71acfa47d9b8b69aef570e253d251.jpg",
+        "Price": "200",
+        "details": "Foxes are small to medium-sized, omnivorous mammals belonging to several genera of the family Canidae. They have a flattened skull, upright triangular ears"
+    },
+    {
+        "_id": "02",
+        "title": "Elephant of Mother",
+        "img": "https://cdn.mos.cms.futurecdn.net/uiCrUgVCf64TzEdTM8x9aD.jpg",
+        "Price": "100",
+        "details": "Elephants are the largest existing land animals. Three living species are currently recognised: the African bush elephant, the African forest elephant,"
+    },
+    {
+        "_id": "03",
+        "title": "Tiger",
+        "img": "https://images.pexels.com/photos/2649841/pexels-photo-2649841.jpeg?cs=srgb&dl=pexels-jose-almeida-2649841.jpg&fm=jpg",
+        "Price": "250",
+        "details": "The tiger is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator,"
+    },
+    {
+        "_id": "04",
+        "title": "Lion is King",
+        "img": "https://cdn.britannica.com/30/150930-050-51878468/lion-Namibia.jpg",
+        "Price": "270",
+        "details": "The lion is a large cat of the genus Panthera native to Africa and India. It has a muscular, broad-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail."
+    },
+    {
+        "_id": "05",
+        "title": "Cute Cat",
+        "img": "https://images.livemint.com/img/2022/08/01/1600x900/Cat-andriyko-podilnyk-RCfi7vgJjUY-unsplash_1659328989095_1659328998370_1659328998370.jpg",
+        "Price": "150",
+        "details": "The cat is a domestic species of small carnivorous mammal. It is the only domesticated species in the family Felidae and is commonly referred to as the domestic cat or house cat to distinguish it from the wild members of the family."
+    },
+    {
+        "_id": "06",
+        "title": "Great Monkeys",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLb2tRMZ7202lv6dMJgqETczuLg3kOMsiQug&usqp=CAU",
+        "Price": "220",
+        "details": "Monkey is a common name that may refer to most mammals of the infraorder Simiiformes, also known as the simians. Traditionally, all animals in the group now known as simians are counted as monkeys except the apes, which constitutes an incomplete paraphyletic grouping;"
+    }
+]
