@@ -1,0 +1,21 @@
+.blog-container {
+    margin: 60px;
+    padding: 20px;
+}
+
+.header-margin {
+    text-align: center;
+    font-size: 40px;
+}
+
+.question {
+    text-align: center;
+}
+
+.blog-para {
+    border: 2px solid gray;
+    border-radius: 8px;
+    margin-top: 18px;
+    padding: 15px;
+    background-color: aliceblue;
+}

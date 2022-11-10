@@ -11,8 +11,6 @@ const Update = () => {
     const handleSubmit = event => {
         event.preventDefault()
         const form = event.target;
-        const name = form.name.value;
-        const email = user?.email || 'Not Register';
         const text = form.text.value;
         const updateReview = {
             text,
@@ -24,9 +22,10 @@ const Update = () => {
             },
             body: JSON.stringify(updateReview)
         })
-        console.log(updateReview)
+            .tnen(res => res.json())
+            .then(data => console.log(data))
 
-        
+
     }
 
 
