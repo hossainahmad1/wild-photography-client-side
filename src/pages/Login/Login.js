@@ -32,7 +32,7 @@ const Login = () => {
             <div className="hero-content gap-10 grid md:grid-cols-2 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
                     <h2 className='text-4xl font-bold'>Login Now</h2>
-                    <p className='font-semibold'>logging in is the process by which an individual gains access <br /> to a computer system by identifying and authenticating themselves.</p>
+                    <p className='text-2xl font-bold'>logging in is the process by which an individual gains access <br /> to a computer system by identifying and authenticating themselves.</p>
                 </div>
                 <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-5xl text-center font-bold">Login </h1>

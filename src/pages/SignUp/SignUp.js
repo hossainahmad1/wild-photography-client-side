@@ -90,7 +90,6 @@ const SignUp = () => {
                     </div>
                     <p className='text-center mb-8 py-5'>Already Have an account? <Link className='text-orange-500' to='/login'>Login</Link></p>
                 </form>
-
             </div>
         </div>
     );
