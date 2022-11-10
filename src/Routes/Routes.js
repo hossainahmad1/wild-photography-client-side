@@ -55,10 +55,10 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
-                path: '/update',
-                element: <Update></Update>
+                path: '/update/:id',
+                element: <Update></Update>,
+                loader: ({ params }) => fetch(`http://localhost:5000/servicemail/${params.id}`)
             },
-
             {
                 path: '/blog',
                 element: <Blog></Blog>

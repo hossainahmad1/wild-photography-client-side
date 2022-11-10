@@ -1,8 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContex } from '../../Provider/AuthProvider';
 
-const MyReviewCart = ({ service, handleDelete, handleUpdate }) => {
+const MyReviewCart = ({ service, handleDelete }) => {
+    // const { user } = useContext(AuthContex)
+    const navigate = useNavigate()
     const { _id, name, email, text, } = service;
+    // const handleUpdate = (id) => {
+    //     navigate(`/update/${id}`)
+    // }
 
 
     return (
@@ -20,12 +26,10 @@ const MyReviewCart = ({ service, handleDelete, handleUpdate }) => {
                     <tbody>
                         <tr>
                             <th><button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
-                                <Link to={`/`}>
-                                    <button onClick={() => handleUpdate(_id)} className='btn btn-ghost'>update</button>
+                                <Link to={`/update/${_id}`}>
+                                    <button className='btn btn-ghost'>update</button>
                                 </Link>
                             </th>
-
-
                             <td>{name}</td>
                             <td>{email}</td>
                             <td>{text}</td>

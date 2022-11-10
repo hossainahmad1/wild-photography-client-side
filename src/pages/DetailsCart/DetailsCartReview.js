@@ -6,7 +6,6 @@ const DetailsCartReview = ({ service }) => {
         <div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
-
                     <thead>
                         <tr>
                             <th></th>

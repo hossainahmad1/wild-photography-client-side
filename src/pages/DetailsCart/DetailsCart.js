@@ -26,7 +26,7 @@ const DetailsCart = () => {
         const name = form.name.value;
         const email = user?.email || 'Not Register';
         const text = form.text.value;
-        console.log(name, email, text)
+        // console.log(name, email, text)
         const service = {
             seviceid: _id,
             name,
@@ -46,10 +46,14 @@ const DetailsCart = () => {
                 console.log(data)
                 if (data.acknowledged) {
                     alert('service added successfully');
+                    const remaining = services.filter(srv => srv._id !==user._id)
+                    setServices(remaining)
                     form.reset()
                 }
             })
             .catch(err => console.log(err))
+
+
 
     }
 
@@ -93,7 +97,7 @@ const DetailsCart = () => {
                                 <form onSubmit={handleSubmit}>
                                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4'>
                                         <input type="text" name='name' placeholder="Name" defaultValue={user?.displayName} readOnly className="input input-bordered input-secondary w-full" required />
-                                        <input type="email" name='email' placeholder="your email" defaultValue={user?.email} readOnly className="input input-bordered input-secondary w-full" />
+                                        <input type="email" name='email' placeholder="your email" defaultValue={user?.email} readOnly className="input input-bordered input-secondary w-full"/>
                                     </div>
                                     <textarea name='text' className="textarea textarea-bordered h-24 w-full" placeholder="Your message" required></textarea>
                                     <input className='btn mb-4' type="submit" value="Review Submit" />
