@@ -17,7 +17,7 @@ const Update = () => {
         const updateReview = {
             text,
         }
-        fetch(`http://localhost:5000/servicemail/${user._id}`, {
+        fetch(`http://localhost:5000/update/${user._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -25,6 +25,8 @@ const Update = () => {
             body: JSON.stringify(updateReview)
         })
         console.log(updateReview)
+
+        
     }
 
 
