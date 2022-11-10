@@ -1,16 +1,16 @@
 import React from 'react';
-import Bannar from '../Bannar/Bannar';
+import HomeBannar from '../HomeBannar/HomeBannar';
 import HomeCart from '../HomeCart/HomeCart';
+import HomeSection from '../HomeSection/HomeSection';
 import ServicesLimit from '../ServicesLimit/ServicesLimit';
 
-const Home = () => {
-    return (
-        <div>
-            <Bannar></Bannar>
-            <ServicesLimit></ServicesLimit>
-            <HomeCart></HomeCart>
-        </div>
-    );
-};
+const Home = () => (
+    <div>
+        <HomeSection></HomeSection>
+        <ServicesLimit></ServicesLimit>
+        <HomeCart></HomeCart>
+        <HomeBannar></HomeBannar>
+    </div>
+);
 
 export default Home;
