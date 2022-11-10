@@ -38,7 +38,12 @@ const MyReview = () => {
     return (
         <div>
             <div className='mt-12 mb-12'>
-                <h2 className='text-2xl '>review {services.length}</h2>
+                {
+                    services?.length > 0 ?
+                        <h2 className='text-2xl text-center '>review {services.length}</h2>
+                        :
+                        <h2 className='text-2xl text-center'>No Review were found</h2>
+                }
                 {
                     services.map(service => <MyReviewCart
                         key={service._id}
