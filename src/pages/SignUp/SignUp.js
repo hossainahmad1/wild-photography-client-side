@@ -58,7 +58,8 @@ const SignUp = () => {
         <div className="hero mt-5 mb-10">
             <div className="hero-content gap-10 grid md:grid-cols-2 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
-                    <img className='w-3/4' src={img} alt="" />
+                    <h2 className='text-4xl font-bold'>SignUp Now </h2>
+                    <p className='text-2xl font-bold'></p>
                 </div>
                 <form onSubmit={handleSignUp} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-5xl text-center font-bold">SignUp </h1>
