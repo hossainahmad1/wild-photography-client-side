@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import img from '../../asset/login/login.svg'
 import { AuthContex } from '../../Provider/AuthProvider';
 
 const Login = () => {
@@ -32,8 +31,8 @@ const Login = () => {
         <div className="hero mt-5 mb-10">
             <div className="hero-content gap-10 grid md:grid-cols-2 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
-                    <img className='w-3/4' src={img} alt="" />
-
+                    <h2 className='text-4xl font-bold'>Login Now</h2>
+                    <p className='font-semibold'>logging in is the process by which an individual gains access <br /> to a computer system by identifying and authenticating themselves.</p>
                 </div>
                 <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-5xl text-center font-bold">Login </h1>
