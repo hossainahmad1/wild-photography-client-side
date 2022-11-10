@@ -59,7 +59,7 @@ const SignUp = () => {
             <div className="hero-content gap-10 grid md:grid-cols-2 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
                     <h2 className='text-4xl font-bold mb-12 text-center'>SignUp Now </h2>
-                    <p className='text-2xl font-bold'>Sign up is a phrase referring to the creation of an online account using an e-mail address or a username and password</p>
+                    <p className='text-2xl font-semibold'>Sign up is a phrase referring to the creation of an online account using an e-mail address or a username and password</p>
                 </div>
                 <form onSubmit={handleSignUp} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-5xl text-center font-bold">SignUp </h1>
