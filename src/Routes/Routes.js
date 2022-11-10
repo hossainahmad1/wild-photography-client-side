@@ -10,6 +10,7 @@ import MyReview from "../pages/MyReview/MyReview";
 import Services from "../pages/Services/Services";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
+import Update from "../pages/Update/Update";
 
 
 
@@ -52,6 +53,10 @@ export const router = createBrowserRouter([
             {
                 path: '/addservice',
                 element: <PrivateRoute><AddService></AddService></PrivateRoute>
+            },
+            {
+                path: '/update',
+                element: <Update></Update>
             },
 
             {

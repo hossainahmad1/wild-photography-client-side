@@ -17,7 +17,7 @@ const DetailsCartReview = ({ service }) => {
                     </thead>
                     <tbody>
                         <tr>
-                            <th>X</th>
+                            <th></th>
                             <td>{name}</td>
                             <td>{email}</td>
                             <td>{text}</td>

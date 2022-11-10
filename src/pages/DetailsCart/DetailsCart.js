@@ -28,7 +28,7 @@ const DetailsCart = () => {
         const text = form.text.value;
         console.log(name, email, text)
         const service = {
-            service: _id,
+            seviceid: _id,
             name,
             email,
             text
@@ -70,21 +70,13 @@ const DetailsCart = () => {
             </div>
 
             <div className='mt-12'>
+                <div className="text-3xl text-center font-bold"> Review blog</div>
+                <h3>service {services.length}</h3>
                 {
-                    user?.email ?
-                        <>
-                            <div className="text-3xl text-center font-bold"> Review blog</div>
-                            <h3>service {services.length}</h3>
-                            {
-                                services.map(service => <DetailsCartReview
-                                    key={service._id}
-                                    service={service}
-                                ></DetailsCartReview>)
-                            }
-                        </>
-                        :
-                        <>
-                        </>
+                    services.map(service => <DetailsCartReview
+                        key={service._id}
+                        service={service}
+                    ></DetailsCartReview>)
                 }
             </div>
 
