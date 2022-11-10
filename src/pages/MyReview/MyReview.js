@@ -9,7 +9,7 @@ const MyReview = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/servicemail?email=${user?.email}`)
+        fetch(`https://assignment-review-server.vercel.app/servicemail?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [user.email])
@@ -18,7 +18,7 @@ const MyReview = () => {
     const handleDelete = id => {
         const procced = window.confirm('Are you sure,you want to delete review')
         if (procced) {
-            fetch(`http://localhost:5000/service/${id}`, {
+            fetch(`https://assignment-review-server.vercel.app/service/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

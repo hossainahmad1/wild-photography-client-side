@@ -19,7 +19,7 @@ const AddService = () => {
             img,
             email
         }
-        fetch('http://localhost:5000/reviewadd', {
+        fetch('https://assignment-review-server.vercel.app/reviewadd', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

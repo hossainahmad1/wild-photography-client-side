@@ -15,7 +15,7 @@ const Update = () => {
         const updateReview = {
             text,
         }
-        fetch(`http://localhost:5000/update/${user._id}`, {
+        fetch(`https://assignment-review-server.vercel.app/update/${user._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -38,6 +38,7 @@ const SignUp = () => {
             .catch(error => console.error(error))
     }
 
+    
     const handleSignInGoogle = () => {
         signInWithGoogle()
             .then(result => {

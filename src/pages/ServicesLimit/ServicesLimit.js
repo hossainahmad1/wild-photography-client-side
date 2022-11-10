@@ -6,7 +6,7 @@ const ServicesLimit = () => {
     const [serviceLimitt, setServiceLimitt] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviewlimit')
+        fetch('https://assignment-review-server.vercel.app/reviewlimit')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

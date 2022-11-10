@@ -13,8 +13,6 @@ import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
 import Update from "../pages/Update/Update";
 
 
-
-
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -40,7 +38,7 @@ export const router = createBrowserRouter([
             {
                 path: '/reviewlimit/:id',
                 element: <DetailsCart></DetailsCart>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviewlimit/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-review-server.vercel.app/reviewlimit/${params.id}`)
             },
             {
                 path: '/service',
@@ -57,7 +55,7 @@ export const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({ params }) => fetch(`http://localhost:5000/servicelimit/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-review-server.vercel.app/servicelimit/${params.id}`)
             },
             {
                 path: '/blog',
