@@ -1,8 +1,6 @@
 import { getAuth, updateProfile } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaGoogle } from 'react-icons/fa';
-import img from '../../asset/login/login.svg';
 import app from '../../firebase/firebase.config';
 import { AuthContex } from '../../Provider/AuthProvider';
 
@@ -11,8 +9,7 @@ import { AuthContex } from '../../Provider/AuthProvider';
 const auth = getAuth(app)
 
 const SignUp = () => {
-    const { createUser, user, signInWithGoogle } = useContext(AuthContex);
-    const [review, setReview] = useState('')
+    const { createUser, signInWithGoogle } = useContext(AuthContex);
 
     const handleSignUp = event => {
         event.preventDefault()
@@ -27,7 +24,6 @@ const SignUp = () => {
                 console.log(user)
                 updateUser(name)
                 form.reset()
-
             })
             .catch(err => console.log(err))
     }
@@ -89,7 +85,7 @@ const SignUp = () => {
                             <button className="btn btn-primary">SignUp</button>
                         </div>
                         <div className="form-control mt-6">
-                            <button onClick={handleSignInGoogle} className="btn btn-primary"><FaGoogle></FaGoogle> SignUp with Google</button>
+                            <button onClick={handleSignInGoogle} className="btn btn-primary"> SignUp with Google</button>
                         </div>
                     </div>
                     <p className='text-center mb-8 py-5'>Already Have an account? <Link className='text-orange-500' to='/login'>Login</Link></p>
