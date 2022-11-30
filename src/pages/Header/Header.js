@@ -44,7 +44,7 @@ const Header = () => {
                 <Link to='/'>
                     <img className='rounded-md' src={logo} alt="" />
                 </Link>
-                <h1 className='text-4xl font-bold ml-2'>Wild World</h1>
+                <h1 className='text-4xl font-bold ml-2'>My Embodied</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
