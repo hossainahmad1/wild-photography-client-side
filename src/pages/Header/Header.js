@@ -9,17 +9,17 @@ const Header = () => {
     const { user, logOut } = useContext(AuthContex)
 
     const navbarItems = <>
-        <li className='mx-2 text-2xl font-medium '><Link to='/'>Home</Link></li>
+        <li className='mx-2 text-xl font-medium '><Link to='/'>Home</Link></li>
         {
             user?.email ?
                 <>
-                    <li className='mx-2 text-2xl font-medium '><Link to='/myreview'>My Review</Link></li>
-                    <li className='mx-2 text-2xl font-medium '><Link to='/addservice'>Add Service</Link></li>
+                    <li className='mx-2 text-xl font-medium '><Link to='/myreview'>My Review</Link></li>
+                    <li className='mx-2 text-xl font-medium '><Link to='/addservice'>Add Service</Link></li>
                 </>
                 :
                 <></>
         }
-        <li className='mx-2 text-2xl font-medium '><Link to='/blog'> Blog </Link></li>
+        <li className='mx-2 text-xl font-medium '><Link to='/blog'> Blog </Link></li>
     </>
 
     const handleSignOut = () => {
@@ -41,10 +41,10 @@ const Header = () => {
                         {navbarItems}
                     </ul>
                 </div>
-                <Link to='/'>
+                {/* <Link to='/'>
                     <img className='rounded-md' src={logo} alt="" />
-                </Link>
-                <h1 className='text-4xl font-bold ml-2'>My Embodied</h1>
+                </Link> */}
+                <h1 className='text-2xl font-bold ml-2'><Link to='/'>My Embodied</Link></h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -54,14 +54,13 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user?.uid ?
-                        <button onClick={handleSignOut} className='mx-2 font-medium text-2xl'>SignOut</button>
+                        <button onClick={handleSignOut} className='mx-2 font-medium text-lg'>SignOut</button>
                         :
                         <>
-                            <Link className='mx-2 font-medium text-xl' to='/login'>Login</Link>
-                            <Link className='mx-2 font-medium text-xl' to='/signup'>SignUp</Link>
+                            <Link className='mx-2 font-medium text-lg' to='/login'>Login</Link>
+                            <Link className='mx-2 font-medium text-lg' to='/signup'>SignUp</Link>
                         </>
                 }
-
             </div>
         </div >
     );

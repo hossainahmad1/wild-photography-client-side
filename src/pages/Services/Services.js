@@ -15,7 +15,7 @@ const Services = () => {
         return <h2 className='text-6xl'>loading....</h2>
     }
     return (
-        <div className='grid gap-5 mt-10 mb-11 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid gap-3 mb-11 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             {
                 services.map(service => <ServicesCart
                     key={service._id}

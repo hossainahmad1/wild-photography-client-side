@@ -9,11 +9,11 @@ import 'react-photo-view/dist/react-photo-view.css';
 const ServicesLimitCart = ({ service }) => {
     const { _id, title, img, Price, details } = service;
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact w-80 bg-base-100 shadow-xl">
 
             <PhotoProvider>
                 <PhotoView src={img}>
-                    <img src={img} alt="" />
+                    <img className='h-[220px] rounded' src={img} alt="" />
                 </PhotoView>
             </PhotoProvider>
 

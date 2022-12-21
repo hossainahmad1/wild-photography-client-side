@@ -16,7 +16,7 @@ const ServicesLimit = () => {
     return (
         <div className='mt-16'>
             <h2 className='text-4xl font-bold text-center'>Service Blog</h2>
-            <div className='grid gap-5 mt-10 mb-11 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid gap-5 mt-10 mb-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     serviceLimitt.map(service => <ServicesLimitCart
                         key={service._id}
@@ -26,7 +26,7 @@ const ServicesLimit = () => {
             </div>
             <div className='mb-10 lg:ml-80'>
                 <Link to='/service'>
-                    <button className="btn btn-warning  lg:ml-72 text-2xl font-semibold">See All</button>
+                    <button className="btn btn-primary lg:ml-52 text-xl font-semibold">See All</button>
                 </Link>
             </div>
         </div>

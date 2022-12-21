@@ -10,11 +10,11 @@ const ServicesCart = ({ service }) => {
     const { _id, img, title, details, Price } = service;
 
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact w-80 bg-base-100 shadow-xl">
 
             <PhotoProvider>
                 <PhotoView src={img}>
-                    <img src={img} alt="" />
+                    <img className='h-[220px] rounded' src={img} alt="" />
                 </PhotoView>
             </PhotoProvider>
 
