@@ -58,9 +58,9 @@ const DetailsCart = () => {
 
     return (
         <div>
-            <div className="card card-side lg:w-3/5 bg-base-100 shadow-xl">
-                <figure><img src={img} alt="Movie" /></figure>
-                <div className="card-body">
+            <div className="card card-side  bg-base-100 shadow-xl">
+                <figure><img className='w-[900px] h-[250px]' src={img} alt="Movie" /></figure>
+                <div className="card-body ">
                     <h2 className="card-title">{title}</h2>
                     <p>{details}</p>
                     <div className="card-actions justify-start">

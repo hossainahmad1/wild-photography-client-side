@@ -1,6 +1,6 @@
 import { getAuth, updateProfile } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import app from '../../firebase/firebase.config';
 import { AuthContex } from '../../Provider/AuthProvider';
 
@@ -10,7 +10,7 @@ const auth = getAuth(app)
 
 const SignUp = () => {
     const { createUser, signInWithGoogle } = useContext(AuthContex);
-
+    const navigate = useNavigate()
     const handleSignUp = event => {
         event.preventDefault()
         const form = event.target;
@@ -23,6 +23,7 @@ const SignUp = () => {
                 const user = result.user;
                 console.log(user)
                 updateUser(name)
+                navigate('/')
                 form.reset()
             })
             .catch(err => console.log(err))
@@ -38,7 +39,7 @@ const SignUp = () => {
             .catch(error => console.error(error))
     }
 
-    
+
     const handleSignInGoogle = () => {
         signInWithGoogle()
             .then(result => {

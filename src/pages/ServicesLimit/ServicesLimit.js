@@ -26,7 +26,7 @@ const ServicesLimit = () => {
             </div>
             <div className='mb-10 lg:ml-80'>
                 <Link to='/service'>
-                    <button className="btn btn-primary lg:ml-52 text-xl font-semibold">See All</button>
+                    <button className="btn btn-primary lg:ml-44 text-xl font-semibold">See All</button>
                 </Link>
             </div>
         </div>
